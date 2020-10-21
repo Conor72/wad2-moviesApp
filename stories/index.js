@@ -1,3 +1,4 @@
+import MovieHeader from '../src/components/headerMovie'
 import MovieDetails from "../src/components/movieDetails";
 import MovieList from "../src/components/movieList";
 import MoviesHeader from "../src/components/headerMovieList";
@@ -112,4 +113,8 @@ storiesOf("Home Page/MovieCard", module)
 
 storiesOf("Movie Details Page/MovieDetails", module).add("default", () => (
   <MovieDetails movie={sample} />
+));
+
+storiesOf("Movie Details Page/MovieHeader", module).add("default", () => (
+  <MovieHeader movie={sample} />
 ));
