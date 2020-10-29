@@ -1,4 +1,4 @@
-import MovieReviewPage from "./pages/movieReviewPage";
+import MovieReviewPage from "./pages/movieReviewPage";            //Navigation of app, import here and use <Route> below 
 import React from "react";
 import ReactDOM from "react-dom";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
