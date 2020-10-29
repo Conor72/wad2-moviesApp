@@ -1,3 +1,4 @@
+import MovieReviewPage from "./pages/movieReviewPage";
 import React from "react";
 import ReactDOM from "react-dom";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
@@ -24,6 +25,7 @@ const App = () => {
           </li>
         </ul>
         <Switch>
+          <Route path="/reviews/:id" component={MovieReviewPage} />
           <Route exact path="/movies/favorites" component={FavoriteMoviesPage} />
           <Route path="/movies/:id" component={MoviePage} />
           <Route path="/" component={HomePage} />
