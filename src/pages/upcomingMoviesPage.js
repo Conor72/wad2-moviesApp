@@ -1,4 +1,4 @@
-import { getUpcomingMovies } from "../api/tmdb-api";
+import { getUpcomingMovies } from "../api/tmdb-api"; //Pulling data from tmdb for upcoming movies
 import React, { useState, useEffect } from "react";
 import StubAPI from "../api/stubAPI";
 import PageTemplate from '../components/templateMovieListPage'
