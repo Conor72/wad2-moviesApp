@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import StubAPI from "../api/stubAPI";
 import PageTemplate from '../components/templateMovieListPage'
 
-const MovieListPage = () => {
+const UpcomingMovieListPage = () => {
   const [movies, setMovies] = useState([]);
   useEffect(() => {
     getMovies().then(movies => {
@@ -30,4 +30,4 @@ const MovieListPage = () => {
   );
 };
 
-export default MovieListPage;
+export default UpcomingMovieListPage;

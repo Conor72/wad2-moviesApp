@@ -6,6 +6,7 @@ import FilterControls from "../src/components/filterControls";
 import MovieCard from "../src/components/movieCard";
 import React from "react";
 import { storiesOf } from "@storybook/react";
+import MovieUpcoming from "../src/components/movieUpcoming";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 
 const sample = {
@@ -117,4 +118,8 @@ storiesOf("Movie Details Page/MovieDetails", module).add("default", () => (
 
 storiesOf("Movie Details Page/MovieHeader", module).add("default", () => (
   <MovieHeader movie={sample} />
+));
+
+storiesOf("Movie Details Page/MovieUpcoming", module).add("default", () => (
+  <MovieUpcoming movie={sample} />
 ));
