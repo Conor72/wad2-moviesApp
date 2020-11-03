@@ -55,6 +55,15 @@ describe("By movie genre", () => {
         .find(".card-title")
         .should("have.text", matchingMovies[index].title);
     });      
+    describe("Filtering", () => {
+        it("should only display movies with specific name", () => {
+          let searchString = "Coco";
+          let matchingMovies = filterByTitle(movies, searchString);
+          cy.get("input").clear().type(searchString); // Enter m in text box
+          cy.get(".card").should("have.length", matchingMovies.length);
+        });
+      });
   });
 });
+
 
