@@ -58,5 +58,6 @@ it("should display the movie's details", () => {
   it("should display a poster image", () => {
     cy.get("img").should('have.attr', 'src');
   });
+
 });
 
