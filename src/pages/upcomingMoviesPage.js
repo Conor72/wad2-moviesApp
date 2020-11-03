@@ -23,7 +23,7 @@ const UpcomingMovieListPage = () => {
 
   return (
       <PageTemplate
-        title='Discover Movies'
+        title='Upcoming Movies'
         movies={movies}
         buttonHandler={addToFavorites}
       />
