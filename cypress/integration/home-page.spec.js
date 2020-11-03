@@ -59,7 +59,7 @@ describe("By movie genre", () => {
         it("should only display movies with specific name", () => {
           let searchString = "Coco";
           let matchingMovies = filterByTitle(movies, searchString);
-          cy.get("input").clear().type(searchString); // Enter m in text box
+          cy.get("input").clear().type(searchString); // Enter Coco in text box
           cy.get(".card").should("have.length", matchingMovies.length);
         });
       });
