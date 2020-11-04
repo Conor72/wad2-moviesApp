@@ -1,3 +1,5 @@
+import GenresContextProvider from "./contexts/genresContext";
+import MoviesContextProvider from "./contexts/moviesContext";
 import MovieReviewPage from "./pages/movieReviewPage";            //Navigation of app, import here and use <Route> below 
 import SiteHeader from './components/siteHeader'
 import React from "react";
@@ -11,10 +13,12 @@ import FavoriteMoviesPage from './pages/favoritesMoviesPage';       // NEW
 
 const App = () => {
   return (
-      <BrowserRouter>
-        <div className="jumbotron">
-          <SiteHeader />      {/* New Header  */}
-          <div className="container-fluid">
+    <BrowserRouter>
+      <div className="jumbotron">
+        <SiteHeader /> 
+        <div className="container-fluid">
+          <MoviesContextProvider>
+            <GenresContextProvider>    {/* NEW */}
           <Switch>
           <Route path="/reviews/:id" component={MovieReviewPage} />
           <Route exact path="/movies/favorites" component={FavoriteMoviesPage} />
@@ -23,9 +27,11 @@ const App = () => {
           <Route path="/" component={HomePage} />
           <Redirect from="*" to="/" />
         </Switch>
+        </GenresContextProvider>    {/* NEW */}
+          </MoviesContextProvider>
+        </div>
       </div>
-    </div>
-  </BrowserRouter>
+    </BrowserRouter>
   );
 };
 
