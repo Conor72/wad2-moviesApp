@@ -1,8 +1,8 @@
-import { getUpcomingMovies } from "../api/tmdb-api"; //Pulling data from tmdb for upcoming movies
+import { getUpcomingMovies } from "../api/tmdb-api"; 
 import React, { useState, useEffect } from "react";
 import StubAPI from "../api/stubAPI";
 import PageTemplate from '../components/templateMovieListPage'
-
+                                                                  //Page is broken, needs to be fixed
 const UpcomingMovieListPage = () => {
   const [movies, setMovies] = useState([]);
   useEffect(() => {
