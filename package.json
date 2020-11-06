@@ -12,10 +12,11 @@
     "react-dom": "^16.11.0",
     "react-hook-form": "^3.29.4",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^3.4.3"
+    "react-scripts": "^3.4.3",
+    "storybook": "^6.0.28"
   },
   "scripts": {
-    "storybook": "start-storybook -s ./public -p 6006 -c ./.storybook",
+    "storybook": "start-storybook -p 9001",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -32,7 +33,7 @@
   ],
   "devDependencies": {
     "@storybook/addon-actions": "^5.3.1",
-    "@storybook/react": "^5.3.1",
+    "@storybook/react": "^5.3.21",
     "babel-loader": "^8.0.6",
     "cypress": "^5.5.0"
   }
