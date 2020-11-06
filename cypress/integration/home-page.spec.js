@@ -25,7 +25,7 @@ describe("Home Page ", () => {
       })
   })
   beforeEach(() => {
-    cy.visit("/")
+    cy.visit('http://localhost:3000/');
   });
 
   describe("Base tests", () => {
