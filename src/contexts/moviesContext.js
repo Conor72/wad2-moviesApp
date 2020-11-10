@@ -1,4 +1,4 @@
-import React, { useEffect, createContext, useReducer } from "react";
+  import React, { useEffect, createContext, useReducer } from "react";
 import { getMovies, getUpcomingMovies } from "../api/tmdb-api";
 
 export const MoviesContext = createContext(null);
