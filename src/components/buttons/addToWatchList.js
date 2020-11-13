@@ -8,7 +8,7 @@ const AddToWatchListButton = ({ movie }) => {
     e.preventDefault();
     context.addToWatchList(movie.id);
   };
-  return (                                      //TODO add functionality for this button
+  return (                                     //Functionality added to button
     <button
       type="button"
       className="btn w-100 btn-primary"
