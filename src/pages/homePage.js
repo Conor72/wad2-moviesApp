@@ -9,6 +9,8 @@ const MovieListPage = () => {
     return !("favorite" in m);
   });
 
+  
+
   return (
       <PageTemplate 
         title='No. Movies'

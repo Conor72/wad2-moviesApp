@@ -1,4 +1,4 @@
-  import React, { useEffect, createContext, useReducer } from "react";
+import React, { useEffect, createContext, useReducer } from "react";
 import { getMovies, getUpcomingMovies } from "../api/tmdb-api";
 
 export const MoviesContext = createContext(null);
@@ -11,7 +11,14 @@ const reducer = (state, action) => {
           m.id === action.payload.movie.id ? { ...m, favorite: true } : m
         ),
         upcoming: [...state.upcoming],
-      };
+      };     
+      case "add-watchlist":
+      return{   
+        movies: state.movies.map((m) =>
+          m.id === action.payload.movie.id ? { ...m, watchlist: true } : m
+        ),
+        upcoming: [...state.upcoming],
+      };  
     case "load":
       return { movies: action.payload.movies, upcoming: [...state.upcoming] };
     case "load-upcoming":
@@ -28,6 +35,7 @@ const reducer = (state, action) => {
     default:
       return state;
   }
+  
 };
 
 const MoviesContextProvider = (props) => {
@@ -36,6 +44,11 @@ const MoviesContextProvider = (props) => {
   const addToFavorites = (movieId) => {
     const index = state.movies.map((m) => m.id).indexOf(movieId);
     dispatch({ type: "add-favorite", payload: { movie: state.movies[index] } });
+  };
+
+  const addToWatchList = (movieId) => {
+    const index = state.movies.map((m) => m.id).indexOf(movieId);
+    dispatch({ type: "add-watchlist", payload: { movie: state.movies[index] } });
   };
 
   const addReview = (movie, review) => {
@@ -63,6 +76,7 @@ const MoviesContextProvider = (props) => {
         upcoming: state.upcoming,
         addToFavorites: addToFavorites,
         addReview: addReview,
+        addToWatchList: addToWatchList,
       }}
     >
       {props.children}
