@@ -57,3 +57,12 @@ build_jobX:
     script:
        # start the server in the background
       - npm run start:ci
+
+
+      test_jobX:
+  stage: test
+  only:
+    - master
+    - demobranch2
+  script:
+    - echo "test job X"
