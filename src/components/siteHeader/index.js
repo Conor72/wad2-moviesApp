@@ -41,7 +41,11 @@ const SiteHeader = () => {
         <Nav.Link href="/"><Link className="nav-link text-dark" to="/login">
               Login
             </Link></Nav.Link>
-
+      </Nav>
+      <Nav>
+        <Nav.Link href="/"><Link className="nav-link text-dark" to="/signup">
+              Sign Up
+            </Link></Nav.Link>
       </Nav>
     </Navbar.Collapse>
   </Navbar>

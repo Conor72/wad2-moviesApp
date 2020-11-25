@@ -15,7 +15,7 @@ import AddMovieReviewPage from './pages/addMovieReviewPage';
 import TopRatedMoviesPage from './pages/topRatedMoviesPage';
 import NowPlayingMoviesPage from './pages/nowPlayingMoviesPage';
 import Login from './components/auth/Login.js';
-
+import Join from './components/auth/Join.js';
 
 
 const App = () => {
@@ -33,6 +33,7 @@ const App = () => {
           <Route exact path="/movies/upcoming" component={UpcomingMoviesPage} />
           <Route exact path="/movies/nowPlaying" component={NowPlayingMoviesPage} />
           <Route exact path="/login" component={Login} />
+          <Route exact path="/signup" component={Join} />
           <Route exact path="/movies/topRated" component={TopRatedMoviesPage} />
           <Route path="/reviews/:id" component={MovieReviewPage} />
           <Route path="/movies/:id" component={MoviePage} />
