@@ -38,7 +38,9 @@ const SiteHeader = () => {
         </NavDropdown>
       </Nav>
       <Nav>
-        <Nav.Link href="/">Profile</Nav.Link>
+        <Nav.Link href="/"><Link className="nav-link text-dark" to="/login">
+              Login
+            </Link></Nav.Link>
 
       </Nav>
     </Navbar.Collapse>
