@@ -1,8 +1,7 @@
 
 
 
-
-  let movies;    // List of movies from TMDB
+let movies;    // List of movies from TMDB
 
 // Utility functions
 const filterByTitle = (movieList, string) =>

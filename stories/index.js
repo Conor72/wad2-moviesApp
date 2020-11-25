@@ -10,8 +10,9 @@ import MovieHeader from "../src/components/headerMovie";
 import AddFavoriteButton from "../src/components/buttons/addToFavorites";
 import { MemoryRouter } from "react-router";
 import GenresContextProvider from "../src/contexts/genresContext";
-import MovieTrending from "../src/components/movieTrending";
 import { action } from "@storybook/addon-actions";
+
+
 
 const sample = {
   adult: false,
@@ -154,6 +155,36 @@ storiesOf("Movie Details Page/MovieHeader", module)
   ))
   .add("default", () => <MovieHeader movie={sample} />);
 
-  storiesOf("Movie Details Page/MovieUpcoming", module).add("default", () => (
-    <MovieTrending movie={sample} />
-  )); 
+
+
+  //////////////
+
+
+  storiesOf("Now Playing/MovieCard", module)
+  .addDecorator(story => (
+    <MemoryRouter initialEntries={["/movies/nowPlaying"]}>{story()}</MemoryRouter>
+  ))
+  .add("default", () => (
+    <MovieCard
+      movie={sample}
+      action={movie => <button className="btn w-100 btn-primary">Test</button>}
+    />
+  ))
+  .add("exception", () => {
+    const sampleNoPoster = { ...sample, poster_path: undefined };
+    return (
+      <MovieCard
+        movie={sampleNoPoster}
+        action={movie => (
+          <button className="btn w-100 btn-primary">Test</button>
+        )}
+      />
+    );
+  });
+
+
+ 
+
+  
+
+  
