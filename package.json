@@ -9,6 +9,7 @@
     "bootstrap": "^4.3.1",
     "dotenv": "^8.2.0",
     "react": "^16.14.0",
+    "react-bootstrap-validation": "^0.1.11",
     "react-dom": "^16.11.0",
     "react-hook-form": "^3.29.4",
     "react-router-dom": "^5.2.0",
@@ -20,7 +21,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start:ci": "start-server-and-test 'http-server ./build  -p 3000' 3000 'cypress run --browser chrome --record'"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -35,6 +37,7 @@
     "@storybook/addon-actions": "^5.3.1",
     "@storybook/react": "^5.3.21",
     "babel-loader": "^8.0.6",
-    "cypress": "^5.5.0"
+    "cypress": "^5.6.0",
+    "start-server-and-test": "^1.10.6"
   }
 }

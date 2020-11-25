@@ -10,6 +10,7 @@ import MovieHeader from "../src/components/headerMovie";
 import AddFavoriteButton from "../src/components/buttons/addToFavorites";
 import { MemoryRouter } from "react-router";
 import GenresContextProvider from "../src/contexts/genresContext";
+import MovieTrending from "../src/components/movieTrending";
 import { action } from "@storybook/addon-actions";
 
 const sample = {
@@ -152,3 +153,7 @@ storiesOf("Movie Details Page/MovieHeader", module)
     <MemoryRouter initialEntries={["/"]}>{story()}</MemoryRouter>
   ))
   .add("default", () => <MovieHeader movie={sample} />);
+
+  storiesOf("Movie Details Page/MovieUpcoming", module).add("default", () => (
+    <MovieTrending movie={sample} />
+  )); 
