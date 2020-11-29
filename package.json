@@ -8,7 +8,8 @@
     "@fortawesome/react-fontawesome": "^0.1.4",
     "bootstrap": "^4.3.1",
     "dotenv": "^8.2.0",
-    "firebase": "6.2.2",
+    "firebase": "^6.2.2",
+    "mocha": "^8.2.1",
     "react": "^16.14.0",
     "react-bootstrap-validation": "^0.1.11",
     "react-dom": "^16.11.0",
@@ -21,7 +22,7 @@
     "storybook": "start-storybook -p 9001",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "mocha",
     "eject": "react-scripts eject",
     "start:ci": "start-server-and-test 'http-server ./build  -p 3000' 3000 'cypress run --browser chrome --record'"
   },
