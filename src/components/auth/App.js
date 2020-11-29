@@ -37,7 +37,7 @@ function App() {
             <Route path="/signup" component={Signup} />
               <Route path="/login" component={Login} />
               <PrivateRoute exact path="/movies/upcoming" component={UpcomingMoviesPage} />
-              <PrivateRoute exact path="/" component={Dashboard} />
+              <PrivateRoute exact path="/dashboard" component={Dashboard} />
               <PrivateRoute path="/update-profile" component={UpdateProfile} />
               <PrivateRoute exact path="/reviews/form" component={AddMovieReviewPage} />
               <PrivateRoute exact path="/movies/watchlist" component={WatchListMoviesPage} />
