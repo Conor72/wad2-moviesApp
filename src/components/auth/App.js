@@ -46,7 +46,7 @@ function App() {
               <PrivateRoute exact path="/movies/topRated" component={TopRatedMoviesPage} />
               <PrivateRoute path="/reviews/:id" component={MovieReviewPage} />
               <PrivateRoute path="/movies/:id" component={MoviePage} />
-              <PrivateRoute path="/" component={HomePage} />
+              <Route path="/" component={HomePage} />
              
               <Route path="/forgot-password" component={ForgotPassword} />
             </Switch>

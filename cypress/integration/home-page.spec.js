@@ -1,15 +1,12 @@
-import cy from "cypress"
-
-
 describe("Home Page", () => {
-  beforeEach(() => {
-    cy.visit("/");
-  });
-
-  describe("Base test", () => {
-    it("displays page header", () => {
-      cy.get("h2").contains("No. Movies");
-      cy.get(".badge").contains(20);
+    beforeEach(() => {
+      cy.visit("/");
     });
+  
+    describe("Base test", () => {
+      it("displays page header", () => {
+        cy.get("h2").contains("No. Movies");
+        cy.get(".badge").contains(20);
+      });
+    })
   })
-})

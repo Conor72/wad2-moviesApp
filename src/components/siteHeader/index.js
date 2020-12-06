@@ -38,6 +38,11 @@ const SiteHeader = () => {
         </NavDropdown>
       </Nav>
       <Nav>
+      <Nav.Link href="/"><Link className="nav-link text-dark" to="/dashboard">
+              Profile
+            </Link></Nav.Link>
+      </Nav>
+      <Nav>
         <Nav.Link href="/"><Link className="nav-link text-dark" to="/login">
               Login
             </Link></Nav.Link>
@@ -51,6 +56,5 @@ const SiteHeader = () => {
   </Navbar>
   );
 };
-
 export default SiteHeader;
 
