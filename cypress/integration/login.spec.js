@@ -1,5 +1,6 @@
 let movies;    // List of movies from TMDB
 
+/* eslint-disable */
   beforeEach(() => {
     cy.visit("http://localhost:3000/login")
   });

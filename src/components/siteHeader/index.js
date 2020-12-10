@@ -15,7 +15,7 @@ const SiteHeader = () => {
         <Nav.Link className="nav-link text-white" href="/">Home</Nav.Link>
         <NavDropdown title="Movies" id="collasible-nav-dropdown">
           
-          <NavDropdown.Item href="/"><Link className="nav-link text-dark" to="/">
+          <NavDropdown.Item id="Home" href="/"><Link className="nav-link text-dark" to="/">
               Home
             </Link></NavDropdown.Item>
           <NavDropdown.Item ><Link className="nav-link text-dark" to="/movies/upcoming">
