@@ -1,3 +1,5 @@
+import 'cypress-layout-inspector/add-support';
+
 /* eslint-disable */
 Cypress.Commands.add("Login" , () => {
 
