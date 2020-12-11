@@ -89,10 +89,7 @@ let movies;    // List of movies from TMDB
    
             it("Sign out if an acocunt is signed in", () => {
           
-              cy.get("nav").get('#collasible-nav-dropdown').get("a").eq(3).click();
-              cy.url().should("include", `/dashboard`);
-              cy.get('.btn').eq(1).click() 
-              cy.url().should("include", `/login`);
+              cy.LogOut()
           
             });
           
