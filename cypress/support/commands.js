@@ -7,7 +7,7 @@ Cypress.Commands.add("Login" , () => {
       cy.get('#email').type('test@gmail.com')
       cy.get('#password').type('123456')
       cy.get('.btn').click() 
-      cy.url().should('include', '/dashboard')
+      cy.url().should('include', '/dashboard')  
 })
 
 
