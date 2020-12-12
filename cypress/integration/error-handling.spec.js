@@ -21,7 +21,7 @@ let movies;    // List of movies from TMDB
     cy.get('#email').type('test')           //Does not include @ symbol for email
     cy.get('#password').type('123456')      
     cy.get('.btn').click()  
-    cy.get('.alert').contains('Failed to log in') 
+    cy.url().should("include", `/login`);   //URL should not change because password is invalid
 
   });
 
