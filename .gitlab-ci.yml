@@ -1,11 +1,9 @@
-# Node docker image with Cypress and Chrome pre-installed
-
-image: cypress/browsers:node12.0.0-chrome73
-
+# Pipeline
 stages:
-   - install
-   - build
-   - test
+  - install
+  - build
+  - exercise
+  - test
 
 # NEW
 variables:
@@ -21,26 +19,26 @@ cache:
       - cache/Cypress
       - node_modules
 
-      
-# Pipeline
-stages:
-  - install
-  - build
-  - test
 
 # Jobs 
-
 install_dependencies:
   stage: install
   script:
     - npm ci
- 
 
 bundle_app:
   stage: build
   script:
     - npm run build
+<<<<<<< HEAD
     
+=======
+  artifacts:
+    paths:
+      - build/
+
+
+>>>>>>> staging
 build_jobX:
   stage: build
   only:
@@ -48,6 +46,7 @@ build_jobX:
   script:
     - echo "build job X on demoBranch works"
 
+<<<<<<< HEAD
     
     e2etest:    
     stage: test
@@ -60,6 +59,28 @@ build_jobX:
 
 
       test_jobX:
+=======
+
+exercise_job:
+  stage: exercise
+  only:
+    - master
+  script:
+    - echo "exercise job X"
+
+
+e2etest:
+  stage: test
+  before_script:
+    - npm install -g http-server
+    - npm install cypress
+  script:
+      # start the server in the background
+    - npm run start:ci
+
+
+test_jobX:
+>>>>>>> staging
   stage: test
   only:
     - master

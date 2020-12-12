@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-
-
-
-let movies;    // List of movies from TMDB
-
-=======
 let movies;    // List of movies from TMDB
 /* eslint-disable */
->>>>>>> staging
 // Utility functions
 const filterByTitle = (movieList, string) =>
   movieList.filter((m) => m.title.toLowerCase().search(string) !== -1);

@@ -20,6 +20,10 @@
 cypress.env.json
 .eslintrc.json
 
+
+
+firebase.config.js
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

@@ -15,7 +15,7 @@ const SiteHeader = () => {
         <Nav.Link className="nav-link text-white" href="/">Home</Nav.Link>
         <NavDropdown title="Movies" id="collasible-nav-dropdown">
           
-          <NavDropdown.Item href="/"><Link className="nav-link text-dark" to="/">
+          <NavDropdown.Item id="Home" href="/"><Link className="nav-link text-dark" to="/">
               Home
             </Link></NavDropdown.Item>
           <NavDropdown.Item ><Link className="nav-link text-dark" to="/movies/upcoming">
@@ -38,13 +38,23 @@ const SiteHeader = () => {
         </NavDropdown>
       </Nav>
       <Nav>
-        <Nav.Link href="/">Profile</Nav.Link>
-
+      <Nav.Link href="/"><Link className="nav-link text-dark" to="/dashboard">
+              Profile
+            </Link></Nav.Link>
+      </Nav>
+      <Nav>
+        <Nav.Link href="/"><Link className="nav-link text-dark" to="/login">
+              Login
+            </Link></Nav.Link>
+      </Nav>
+      <Nav>
+        <Nav.Link href="/"><Link className="nav-link text-dark" to="/signup">
+              Sign Up
+            </Link></Nav.Link>
       </Nav>
     </Navbar.Collapse>
   </Navbar>
   );
 };
-
 export default SiteHeader;
 
