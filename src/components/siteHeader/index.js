@@ -21,12 +21,14 @@ const SiteHeader = () => {
           <NavDropdown.Item ><Link className="nav-link text-dark" to="/movies/upcoming">
               Upcoming
             </Link></NavDropdown.Item>
-          <NavDropdown.Item href="/movies/upcoming">Placeholder</NavDropdown.Item>
+            <NavDropdown.Item ><Link className="nav-link text-dark" to="/movies/popular">
+              Popular
+            </Link></NavDropdown.Item>
           <NavDropdown.Item ><Link className="nav-link text-dark" to="/movies/nowPlaying">
               Now Playing
             </Link></NavDropdown.Item>
           <NavDropdown.Item ><Link className="nav-link text-dark" to="/movies/topRated">
-              Top rated
+              Top Rated
             </Link></NavDropdown.Item>
           <NavDropdown.Divider />
           <NavDropdown.Item><Link className="nav-link text-dark" to="/movies/favorites">

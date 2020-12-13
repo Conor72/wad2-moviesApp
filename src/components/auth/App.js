@@ -15,12 +15,13 @@ import SiteHeader from '../../components/siteHeader';
 import HomePage from "../../pages/homePage";
 import MoviePage from '../../pages/movieDetailsPage'
 import FavoriteMoviesPage from '../../pages/favoritesMoviesPage'       
-import UpcomingMoviesPage from '../../pages/upcomingMoviesPage'  // NEW
+import UpcomingMoviesPage from '../../pages/upcomingMoviesPage' 
 import MovieReviewPage from "../../pages/addMovieReviewPage";
 import WatchListMoviesPage from "../../pages/watchListMoviesPage";
 import AddMovieReviewPage from '../../pages/addMovieReviewPage';
 import TopRatedMoviesPage from '../../pages/topRatedMoviesPage';
 import NowPlayingMoviesPage from '../../pages/nowPlayingMoviesPage';
+import PopularMoviesPage from '../../pages/popularMoviesPage';
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
             <Route path="/signup" component={Signup} />
               <Route path="/login" component={Login} />
               <PrivateRoute exact path="/movies/upcoming" component={UpcomingMoviesPage} />
+              <PrivateRoute exact path="/movies/popular" component={PopularMoviesPage} />
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
               <PrivateRoute path="/update-profile" component={UpdateProfile} />
               <PrivateRoute exact path="/reviews/form" component={AddMovieReviewPage} />
