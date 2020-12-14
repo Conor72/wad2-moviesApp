@@ -7,14 +7,16 @@ import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 
 const SiteHeader = () => {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-    <Navbar.Brand href="#home">TMDB Client</Navbar.Brand>
+    <Navbar className = "color-nav" collapseOnSelect expand="lg" variant="dark">
+    <Navbar.Brand href="/">TMDB Client</Navbar.Brand>
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
     <Navbar.Collapse id="responsive-navbar-nav">
       <Nav className="mr-auto">
         <Nav.Link className="nav-link text-white" href="/">Home</Nav.Link>
-        <NavDropdown title="Movies" id="collasible-nav-dropdown">
-          
+   
+        <NavDropdown className="text-white" id="collasible-nav-dropdown" title={
+        <span className="text-white">Movies</span>
+    }>
           <NavDropdown.Item id="Home" href="/"><Link className="nav-link text-dark" to="/">
               Home
             </Link></NavDropdown.Item>
@@ -40,17 +42,17 @@ const SiteHeader = () => {
         </NavDropdown>
       </Nav>
       <Nav>
-      <Nav.Link href="/"><Link className="nav-link text-dark" to="/dashboard">
+      <Nav.Link href="/"><Link className="nav-link text-white" to="/dashboard">
               Profile
             </Link></Nav.Link>
       </Nav>
       <Nav>
-        <Nav.Link href="/"><Link className="nav-link text-dark" to="/login">
+        <Nav.Link href="/"><Link className="nav-link text-white" to="/login">
               Login
             </Link></Nav.Link>
       </Nav>
       <Nav>
-        <Nav.Link href="/"><Link className="nav-link text-dark" to="/signup">
+        <Nav.Link href="/"><Link className="nav-link text-white" to="/signup">
               Sign Up
             </Link></Nav.Link>
       </Nav>
