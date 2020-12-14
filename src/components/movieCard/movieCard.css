@@ -6,15 +6,33 @@
   }
 
 p {
-  margin-top: 1px;
-  margin-bottom: 1px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .card-body {
   padding-top: 1px;
   padding-bottom: 1px;
+  
 }
+
 
 .card-title {
   text-align: center
 }
+
+img {
+  border-radius: 8px;
+}
+
+.card {
+    text-align: center;
+    margin-top: 15px;
+    padding-top: 15px;
+}
+
+.rating {
+  text-align: center;
+  
+}
+

@@ -8,7 +8,7 @@ const MovieCard = ({movie, action}) => {
 
   return (
     <div className="col-sm-3">
-      <div className="card  bg-white">
+      <div className="card">
       <Link to={`/movies/${movie.id}`}>
         <img
           className="card-img-tag center "
@@ -22,13 +22,12 @@ const MovieCard = ({movie, action}) => {
         </Link>
         <div className="card-body">
           <h4 className="card-title ">{movie.title}</h4>
+        
           <p>
-            <FontAwesomeIcon icon={["fas", "calendar"]} />
-            <span> {movie.release_date}</span>
-          </p>
-          <p>
+            <div className="rating">
             <FontAwesomeIcon icon={["fas", "star"]} />
-            <span> {movie.vote_average}</span>
+            <span >{movie.vote_average}</span>
+            </div>
           </p>
         </div>
         <div className="card-footer">
