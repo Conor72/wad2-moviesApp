@@ -29,6 +29,7 @@ img {
     text-align: center;
     margin-top: 15px;
     padding-top: 15px;
+    margin-bottom: 20px;
 }
 
 .rating {
@@ -36,3 +37,19 @@ img {
   
 }
 
+
+.col-sm-3{
+
+  background-color:  rgb(44, 44, 44);
+}
+
+
+h2 {
+
+  text-align: center;
+}
+
+.badge {
+
+  text-align: center;
+}

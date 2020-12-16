@@ -6,7 +6,7 @@ const MovieUpcoming = props => {
   const movieCards = props.movies.map(m => (
     <Movie key={m.id} movie={m} buttonHandler={props.buttonHandler} />
   ));
-  return <div className="row movies bg-info">{movieCards}</div>;
+  return <div className="test row movies bg-info">{movieCards}</div>;
 };
 
 export default MovieUpcoming;

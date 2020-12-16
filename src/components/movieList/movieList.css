@@ -1,5 +1,14 @@
 .movies {
     padding-top: 10px;
     margin-top: 0px;
+   
+        background-color: black;
     
+    
+    
+}
+
+.backdrop{
+
+    background-color: rgb(44, 44, 44);
 }

@@ -1,7 +1,3 @@
-let movies;    // List of movies from TMDB
-
-
-
 //This test will display that only users that are LOGGED in are able to access the protected routes. Starts with logging in a user, navigating to all pages, then 
 //logs out and attempts to navigate to view the same pages, but will instead be redirected to login page because user is not logged in.
 

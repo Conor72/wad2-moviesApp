@@ -18,7 +18,7 @@ const FilterControls = props => {
 
   return (
     <div className="row bg-warning">
-      <div className="col-md-12">
+      <div className="edge col-md-12">
         <h4>
           <span>List Filtering:</span>
           <input

@@ -22,7 +22,7 @@ import AddMovieReviewPage from '../../pages/addMovieReviewPage';
 import TopRatedMoviesPage from '../../pages/topRatedMoviesPage';
 import NowPlayingMoviesPage from '../../pages/nowPlayingMoviesPage';
 import PopularMoviesPage from '../../pages/popularMoviesPage';
-
+import "./styles.css";
 
 function App() {
   return (
@@ -30,7 +30,6 @@ function App() {
     <div className="jumbotron">
     <SiteHeader /> 
     <div className="container-fluid">
-       
           <AuthProvider>
           <MoviesContextProvider> 
            <GenresContextProvider>  
@@ -49,14 +48,12 @@ function App() {
               <PrivateRoute path="/reviews/:id" component={MovieReviewPage} />
               <PrivateRoute path="/movies/:id" component={MoviePage} />
               <Route path="/" component={HomePage} />
-             
               <Route path="/forgot-password" component={ForgotPassword} />
             </Switch>
             </GenresContextProvider>    
         </MoviesContextProvider> 
           </AuthProvider>
-       
-        </div>
+       </div> 
       </div>
       </Router>
   );

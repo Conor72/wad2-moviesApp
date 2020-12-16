@@ -1,5 +1,6 @@
 h4 {
     padding-top: 5px;
+    padding-bottom: 5px;
   }
   span {
     margin-right: 10px;
@@ -7,4 +8,20 @@ h4 {
   
   input {
     margin-right: 100px;
+  }
+
+  
+  .edge{
+    background-color: green;
+  }
+
+  .genre{
+
+    text-align: right;
+  }
+  
+
+  .test{
+
+    text-align: center;
   }
