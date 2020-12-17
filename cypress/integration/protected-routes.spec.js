@@ -33,31 +33,36 @@
       cy.url().should("include", `/upcoming`);
     });
   
-  
-    it("Should navigate to Now Playing Movies", () => {
+    it("Should navigate to Popular Movies", () => {
   
       cy.get("nav").get('#collasible-nav-dropdown').click().get("a").find("a").eq(2).click();
+      cy.url().should("include", `/popular`);
+    });
+  
+  
+    it("Should navigate to Now Playing Movies", () => {
+      cy.get("nav").get('#collasible-nav-dropdown').click().get("a").find("a").eq(3).click();
       cy.url().should("include", `/nowPlaying`);
     });
   
   
     it("Should navigate to Top Rated Movies", () => {
   
-      cy.get("nav").get('#collasible-nav-dropdown').click().get("a").find("a").eq(3).click();
+      cy.get("nav").get('#collasible-nav-dropdown').click().get("a").find("a").eq(4).click();
       cy.url().should("include", `/topRated`);
     });
   
   
     it("Should navigate to Favourites Page", () => {
   
-      cy.get("nav").get('#collasible-nav-dropdown').click().get("a").find("a").eq(4).click();
+      cy.get("nav").get('#collasible-nav-dropdown').click().get("a").find("a").eq(5).click();
       cy.url().should("include", `/favorites`);
     });
   
   
     it("Should navigate to Watch List Page", () => {
   
-      cy.get("nav").get('#collasible-nav-dropdown').click().get("a").find("a").eq(5).click();
+      cy.get("nav").get('#collasible-nav-dropdown').click().get("a").find("a").eq(6).click();
       cy.url().should("include", `/watchlist`);
     });
   
@@ -109,17 +114,23 @@
                cy.get("nav").get('#collasible-nav-dropdown').click().get("a").find("a").eq(1).click();
                cy.url().should("include", `/login`);
              });
+
+             it("Should attempt to navigate to Popular Movies & be redirected to Login Page", () => {
+   
+              cy.get("nav").get('#collasible-nav-dropdown').click().get("a").find("a").eq(2).click();
+              cy.url().should("include", `/login`);
+            });
        
              it("Should attempt to navigate to Now Playing Movies & be redirected to Login Page", () => {
    
-               cy.get("nav").get('#collasible-nav-dropdown').click().get("a").find("a").eq(2).click();
+               cy.get("nav").get('#collasible-nav-dropdown').click().get("a").find("a").eq(3).click();
                cy.url().should("include", `/login`);
              });
    
    
              it("Should attempt to navigate to Top Rated Movies & be redirected to Login Page", () => {
    
-               cy.get("nav").get('#collasible-nav-dropdown').click().get("a").find("a").eq(3).click();
+               cy.get("nav").get('#collasible-nav-dropdown').click().get("a").find("a").eq(4).click();
                cy.url().should("include", `/login`);
              });
        
@@ -127,14 +138,14 @@
    
              it("Should attempt to navigate to Favorites Movies Page & be redirected to Login Page", () => {
    
-               cy.get("nav").get('#collasible-nav-dropdown').click().get("a").find("a").eq(4).click();
+               cy.get("nav").get('#collasible-nav-dropdown').click().get("a").find("a").eq(5).click();
                cy.url().should("include", `/login`);
              });
            
            
              it("Should attempt to navigate to Watch List Page & be redirected to Login Page", () => {
            
-               cy.get("nav").get('#collasible-nav-dropdown').click().get("a").find("a").eq(5).click();
+               cy.get("nav").get('#collasible-nav-dropdown').click().get("a").find("a").eq(6).click();
                cy.url().should("include", `/login`);
              });
        
