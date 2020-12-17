@@ -43,7 +43,7 @@ export default function Login() {
             </Form.Group>
             <Form.Group textAlign='center' id="password">
               <Form.Label>Password</Form.Label>
-              <Form.Control placeholder='Password'type="password" ref={passwordRef} required />
+              <Form.Control placeholder='Password' type="password" ref={passwordRef} required />
             </Form.Group>
             <Button disabled={loading} className="w-100" type="submit">
               Log In
