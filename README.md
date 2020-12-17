@@ -1,7 +1,3 @@
-# wad2-moviesApp
-Movies Web application made with react and using the TMDb API.
-
-
 # Assignment 1 - ReactJS app.
 
 Name: Conor Brett
@@ -26,17 +22,44 @@ Name: Conor Brett
 + https://api.themoviedb.org/3/movie/popular?api_key - Get a list of Popular Movies.
 + https://api.themoviedb.org/3/movie/now_playing?api_key - Get a list of Now Playing Movies.
 + https://api.themoviedb.org/3/movie/top_rated?api_key - Get Top Rated Movies.
++ https://api.themoviedb.org/3/discover/movie?api_key - Discover Movies
++ https://api.themoviedb.org/3/genre/movie/list?api_key - Get movie genres.
++ https://api.themoviedb.org/3/movie/${id}/reviews?api_key - Get movie reviews.
++ https://api.themoviedb.org/3/movie/upcoming?api_key - Get upcoming movies.
 
 ## App Design.
 
 ### UI Design.
 
+Home Page of the website. Displays movies and it is the only movies page viewable for users that are not signed in
+![](https://github.com/Conor72/wad2-moviesApp/blob/master/public/UI%20-%20Home%20screen.png)
 
-![][UI - Home screen]
+Example of a clickable movie card which includes a semantic ui hover button. The edges of the card and image have been rounded.
+![](https://github.com/Conor72/wad2-moviesApp/blob/master/public/UI%20-%20Movie%20Card.png)
 
+Movie card when a user is about to add the movie to their watch list. When hovering over the button it changes colour.
+![](https://github.com/Conor72/wad2-moviesApp/blob/master/public/UI%20-%20Movie%20Card%20hovering%20over%20button.png)
 
+Navbar with a dropdown menu for navigation to movie pages & favourites + watch list pages.
+![](https://github.com/Conor72/wad2-moviesApp/blob/master/public/UI%20-%20Dropdown%20Navbar.png)
 
+Bootstrap navbar when on a smaller resolution or a mobile phone.
+![](https://github.com/Conor72/wad2-moviesApp/blob/master/public/UI%20-%20Bootstrap%20Navbar%201.png)
 
+Expanding the navbar.
+![](https://github.com/Conor72/wad2-moviesApp/blob/master/public/UI%20-%20Bootstrap%20Navbar%202.png)
+
+Using the dropdown menu.
+![](https://github.com/Conor72/wad2-moviesApp/blob/master/public/UI%20-%20Bootstrap%20Navbar%203.png)
+
+Sign Up Page.
+![](https://github.com/Conor72/wad2-moviesApp/blob/master/public/UI%20-%20Sign%20Up.png)
+
+Login Page.
+![](https://github.com/Conor72/wad2-moviesApp/blob/master/public/UI%20-%20Login.png)
+
+Profile Page.
+![](https://github.com/Conor72/wad2-moviesApp/blob/master/public/UI%20-%20Profile.png)
 
 
 ## Routing.
@@ -45,8 +68,8 @@ Name: Conor Brett
 + /signup - (public) - Allows a new user to create an account and login to access the website
 + /login (public) - Allows a user to login to their existing account and access the website
 
-
-+ /movies/upcoming - (protected - Redirected to Login Page if you try to access with out being signed in) - Displays upcoming movies.
++ (Protected Routes redirects to Login Page if you try to access without being signed in)
++ /movies/upcoming - (protected ) - Displays upcoming movies.
 + /movies/popular - (protected) - Displays popular movies.
 + /movies/nowPlaying - (protected) - Displays now playing movies.
 + /movies/topRated - (protected) - Displays top rated movies.
@@ -61,15 +84,17 @@ Name: Conor Brett
 
 ### Data hyperlinking.
 
+If you already have an account and you find yourself on the Sign Up page you can click this link to bring you directly to the login page.
+![](https://github.com/Conor72/wad2-moviesApp/blob/master/public/Data%20HyperLinking%20-%20Go%20to%20Login%20Page%20from%20Sign%20Up%20page.png)
 
-![][DataHyperlinking]
-> Placeholder
+If you're on the Login page and don't have an account you can click this link to bring you to the Sign Up page.
+![](https://github.com/Conor72/wad2-moviesApp/blob/master/public/Data%20HyperLinking%20-%20Go%20to%20Sign%20Up%20page%20from%20login%20page.png)
+
 
 ## Independent learning (If relevant).
 
-. . . . . Briefly mention each technologies/techniques used in your project codebase that were not covered in the lectures/labs. Provide source code filename references to support your assertions and include reference material links (articles/blogs).
-
- +Firebase Authentification - src\components\auth
+ + Firebase Authentification - src\components\auth
+ + Public and Private routing
  
 
 
@@ -81,38 +106,42 @@ Name: Conor Brett
 
 ## App Features.
 
-[Document each new feature/page in your Movies Fan app, including: Feature Name; Its objective/purpose; The associated test file; a screenshot of its UI.]
-e,g,
- 
-+ Movie Details page - Shows the details about a movie. The Show reviews button reveals an excerpt for each critic review of the movie.
+ + Feature 1 - New page for popular movies - cypress\integration\popularMovies-page.spec.js
+ + Feature 2 - New page for now playing movies
+ + Feature 3 - New page for top rated movies
+ + Feature 4 - Firebase auth login - cypress\integration\login.spec.js
+ + Feature 5 - Firebase auth sign up - cypress\integration\signup.spec.js
+ + Feature 6 - Profile page that display users email 
+ + Feature 7 - An update profile page that allows the user to change their email and/or password.
+ + Feature 8 - Pages that are only viewable to a user that is logged in. - cypress\integration\protected-routes.spec.js
+ + Feature 8 - Error Handling - cypress\integration\error-handling.spec.js
+ + Feature 9 - Staying logged in after refresh - cypress\integration\stay-loggedIn-after-refresh.spec.js
+ + Feature 10 - Layout inspector - cypress\integration\position.spec.js
 
-Tests: cypress/integration/movieDetails.spec.js 
-
-![][movieDetail]
 
 
 ## Testing.
 
 Cypress Dashboard URL: https://dashboard.cypress.io/projects/fccafy/runs/7/overview
 
-After having trouble with GitLab I decided to switch to use Cypress Integrated GitHub
+After having trouble with GitLab I decided to switch to use Cypress Integrated GitHub to run my tests
 
-
-CYPRESS DASHBOARD SCREENSHOT
+![](https://github.com/Conor72/wad2-moviesApp/blob/master/public/Cypress%20Dashboard.png)
 
 
 ### Advanced Testing (If required).
 
-+ cypress/integration/error-handling.spec.js - Test when incorrect password is entered + Test to make sure an alert pops up when an incorrect email is entered
 + cypress/integration/protected-routes.spec.js - Test navigation to every page when logged in (using custom command) , then test navigation to every page when not signed in and ensure the user gets redirected to login page.
++ cypress/integration/error-handling.spec.js - Test when incorrect password is entered + Test to make sure an alert pops up when an incorrect email is entered
 + cypress/integration/stay-loggedIn-after-refresh.spec.js - Test that the user stays logged in even after a page is refreshed
 
 ## Independent learning (If relevant).
 
-[ Itemize each technologies/techniques used in your project that were not covered in the lectures/labs. Provide the necessary evidence of their use (e,g, project file names, screenshots, service URL, etc)
-
  + Custom cypress commands - /cypress/support/commands.js - Two of these commands are then used in /cypress/integration/protected-routes.spec.js
- + Cypress integrated with Github CYPRESS INTEGRATED SCREENSHOT HERE
+ + Cypress integration with Github
+ + Firebase Authentification - src/components/auth
+ + Public and Private routing
+ + Cypress layout inspect - cypress/integration/position.spec.js
  
  
 ## References.
@@ -121,11 +150,3 @@ CYPRESS DASHBOARD SCREENSHOT
 + https://www.youtube.com/watch?v=8r1Pb6Ja90o - Using firebase to upload images
 + https://www.youtube.com/watch?v=PKwu15ldZ7k&t - https://github.com/WebDevSimplified/React-Firebase-Auth - Firebase Auth
 
-
----------------------------------
-
-[movieDetail]: ./public/movieDetail.png
-[review]: ./public/review.png
-[reviewLink]: ./public/reviewLink.png
-[cardLink]: ./public/cardLink.png
-[stories]: ./public/storybook.png
