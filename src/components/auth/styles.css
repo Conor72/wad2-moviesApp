@@ -45,6 +45,8 @@
     text-transform: uppercase;
     padding: 15px;
   }
+
+  
   
   .googleBtn {
     width: 225px;
@@ -89,7 +91,7 @@
   }
 
   .button {
-    background-color: #4CAF50; /* Green */
+    background-color: blue;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -104,5 +106,10 @@
   }
 
   .container {
-    background-color: green;
+    background-color: blue;
+  }
+
+  .form-label {
+
+    text-align: left;
   }

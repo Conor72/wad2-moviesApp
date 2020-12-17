@@ -45,8 +45,9 @@ export default function UpdateProfile() {
     <>
       <Card>
         <Card.Body>
-          <h2 className="text-center mb-4">Update Profile</h2>
+        <h2 className="text-left mb-4">Update Profile</h2>
           {error && <Alert variant="danger">{error}</Alert>}
+          <div className= "text-left">
           <Form onSubmit={handleSubmit}>
             <Form.Group id="email">
               <Form.Label>Email</Form.Label>
@@ -62,7 +63,7 @@ export default function UpdateProfile() {
               <Form.Control
                 type="password"
                 ref={passwordRef}
-                placeholder="Leave blank to keep the same"
+                placeholder="New Password"
               />
             </Form.Group>
             <Form.Group id="password-confirm">
@@ -70,13 +71,14 @@ export default function UpdateProfile() {
               <Form.Control
                 type="password"
                 ref={passwordConfirmRef}
-                placeholder="Leave blank to keep the same"
+                placeholder="Confirm Password"
               />
             </Form.Group>
             <Button disabled={loading} className="w-100" type="submit">
               Update
             </Button>
           </Form>
+        </div>
         </Card.Body>
       </Card>
       <div className="w-100 text-center mt-2">

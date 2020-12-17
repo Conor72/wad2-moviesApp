@@ -46,10 +46,10 @@ img {
 
 h2 {
 
-  text-align: center;
-}
+  text-align: left;
+  
+    padding-top: 8px;
+    padding-bottom: 8px;
+   
 
-.badge {
-
-  text-align: center;
 }

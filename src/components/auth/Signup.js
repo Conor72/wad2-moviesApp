@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react"
 import { Form, Button, Card, Alert } from "react-bootstrap"
 import { useAuth } from "./AuthContext"
 import { Link, useHistory } from "react-router-dom"
+import "./styles.css"
 
 export default function Signup() {
   const emailRef = useRef()
@@ -35,16 +36,17 @@ export default function Signup() {
     <>
       <Card>
         <Card.Body>
-          <h2 className="text-center mb-4">Sign Up</h2>
+          <h2 className="text-left mb-4">Sign Up</h2>
           {error && <Alert variant="danger">{error}</Alert>}
+          <div className= "text-left">
           <Form onSubmit={handleSubmit}>
             <Form.Group id="email">
               <Form.Label>Email</Form.Label>
               <Form.Control type="email" ref={emailRef} required />
             </Form.Group>
             <Form.Group id="password">
-              <Form.Label>Password</Form.Label>
-              <Form.Control type="password" ref={passwordRef} required />
+              <Form.Label >Password</Form.Label>
+              <Form.Control  type="password" ref={passwordRef} required />
             </Form.Group>
             <Form.Group id="password-confirm">
               <Form.Label>Password Confirmation</Form.Label>
@@ -54,6 +56,7 @@ export default function Signup() {
               Sign Up
             </Button>
           </Form>
+          </div>
         </Card.Body>
       </Card>
       <div className="w-100 text-center mt-2">

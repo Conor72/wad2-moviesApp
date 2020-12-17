@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const ReviewButton = ({ movie }) => {
   return (
     <Link
-      className="ui inverted green button"
+      className="ui inverted blue button"
       to={{
         pathname: `/reviews/form`,
         state: {

@@ -12,7 +12,7 @@ h4 {
 
   
   .edge{
-    background-color: green;
+    background-color: rgb(1, 184, 216);
   }
 
   .genre{
@@ -21,7 +21,7 @@ h4 {
   }
   
 
-  .test{
+  h4{
 
     text-align: center;
   }

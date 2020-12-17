@@ -11,7 +11,7 @@ const AddToFavoriteButton = ({ movie }) => {
   return (
     <button
       type="button"
-      className="ui inverted green button"
+      className="ui inverted blue button"
       onClick={handleAddToFavorite}
     >
       Add to Favorites

@@ -11,7 +11,7 @@ const AddToWatchListButton = ({ movie }) => {
   return (                                     //Functionality added to button
     <button
       type="button"
-      className="ui inverted green button"
+      className="ui inverted blue button"
       onClick={handleAddToWatchList}
     >
       Add to Watch List

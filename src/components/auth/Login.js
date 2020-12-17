@@ -33,16 +33,15 @@ export default function Login() {
     
     <Card>
         <Card.Body>
-        <Header as='h2' color='green' textAlign='center'>
-          Log In
-      </Header>
+        <h2 className="text-left mb-4">Login</h2>
+      <div className= "text-left">
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={handleSubmit}>
             <Form.Group fluid icon='user' iconPosition='left' placeholder='E-mail address' id="email">
               <Form.Label>Email</Form.Label>
               <Form.Control placeholder='E-mail address' type="email" ref={emailRef} required />
             </Form.Group>
-            <Form.Group id="password">
+            <Form.Group textAlign='center' id="password">
               <Form.Label>Password</Form.Label>
               <Form.Control placeholder='Password'type="password" ref={passwordRef} required />
             </Form.Group>
@@ -50,7 +49,7 @@ export default function Login() {
               Log In
             </Button>
           </Form>
-        
+          </div>
           
      
           <Message>
