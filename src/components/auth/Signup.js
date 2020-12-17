@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react"
 import { Form, Button, Card, Alert } from "react-bootstrap"
+import { Message} from 'semantic-ui-react'
 import { useAuth } from "./AuthContext"
 import { Link, useHistory } from "react-router-dom"
 import "./styles.css"
@@ -55,13 +56,17 @@ export default function Signup() {
             <Button disabled={loading} className="w-100" type="submit">
               Sign Up
             </Button>
+            <Message>
+      <div className="w-100 text-center mt-2">
+        Already have an account? <Link to="/login">Log In</Link>
+      </div>
+      </Message>
           </Form>
           </div>
         </Card.Body>
       </Card>
-      <div className="w-100 text-center mt-2">
-        Already have an account? <Link to="/login">Log In</Link>
-      </div>
+     
+    
     </>
   )
 }

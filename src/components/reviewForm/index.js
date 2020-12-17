@@ -48,18 +48,7 @@ const ReviewForm = ({ movie, history }) => {
       <button type="submit" className="btn btn-primary">
         Submit
       </button>
-      <button
-        type="reset"
-        className="btn btn-primary reset"
-        onClick={() => {
-          reset({
-            author: "",
-            content: ""
-          });
-        }}
-      >
-        Reset
-      </button>
+      
     </form>
   );
 };
